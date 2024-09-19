@@ -1,7 +1,9 @@
 Gussranch
+
 Gussranch is a dynamic e-commerce website that features an admin panel. This project leverages a combination of front-end and back-end technologies to provide a seamless online shopping experience.
 
 Features
+
 Dynamic E-commerce Platform: Users can browse and purchase products online.
 Admin Panel: Manage products, view orders, and handle other administrative tasks.
 Responsive Design: Built with HTML, CSS, and Bootstrap to ensure compatibility with various devices.
