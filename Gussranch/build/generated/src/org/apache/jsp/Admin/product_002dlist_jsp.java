@@ -1,0 +1,405 @@
+package org.apache.jsp.Admin;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.jsp.*;
+import java.sql.ResultSet;
+
+public final class product_002dlist_jsp extends org.apache.jasper.runtime.HttpJspBase
+    implements org.apache.jasper.runtime.JspSourceDependent {
+
+  private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
+
+  private static java.util.List<String> _jspx_dependants;
+
+  static {
+    _jspx_dependants = new java.util.ArrayList<String>(3);
+    _jspx_dependants.add("/Admin/sidebar.jsp");
+    _jspx_dependants.add("/Admin/header.jsp");
+    _jspx_dependants.add("/Admin/footer.jsp");
+  }
+
+  private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
+
+  public java.util.List<String> getDependants() {
+    return _jspx_dependants;
+  }
+
+  public void _jspService(HttpServletRequest request, HttpServletResponse response)
+        throws java.io.IOException, ServletException {
+
+    PageContext pageContext = null;
+    HttpSession session = null;
+    ServletContext application = null;
+    ServletConfig config = null;
+    JspWriter out = null;
+    Object page = this;
+    JspWriter _jspx_out = null;
+    PageContext _jspx_page_context = null;
+
+    try {
+      response.setContentType("text/html");
+      pageContext = _jspxFactory.getPageContext(this, request, response,
+      			null, true, 8192, true);
+      _jspx_page_context = pageContext;
+      application = pageContext.getServletContext();
+      config = pageContext.getServletConfig();
+      session = pageContext.getSession();
+      out = pageContext.getOut();
+      _jspx_out = out;
+      _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
+
+      out.write("\n");
+      out.write("<!DOCTYPE HTML>\n");
+      out.write("<html>\n");
+      out.write("    <head>\n");
+      out.write("        <title>Product List </title>\n");
+      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n");
+      out.write("        <meta name=\"keywords\" content=\"Glance Design Dashboard Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, \n");
+      out.write("              SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design\" />\n");
+      out.write("        <script type=\"application/x-javascript\"> addEventListener(\"load\", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>\n");
+      out.write("\n");
+      out.write("        <!-- Bootstrap Core CSS -->\n");
+      out.write("        <link href=\"css/bootstrap.css\" rel='stylesheet' type='text/css' />\n");
+      out.write("\n");
+      out.write("        <!-- Custom CSS -->\n");
+      out.write("        <link href=\"css/style.css\" rel='stylesheet' type='text/css' />\n");
+      out.write("\n");
+      out.write("        <!-- font-awesome icons CSS -->\n");
+      out.write("        <link href=\"css/font-awesome.css\" rel=\"stylesheet\"> \n");
+      out.write("        <!-- //font-awesome icons CSS -->\n");
+      out.write("\n");
+      out.write("        <!-- side nav css file -->\n");
+      out.write("        <link href='css/SidebarNav.min.css' media='all' rel='stylesheet' type='text/css'/>\n");
+      out.write("        <!-- side nav css file -->\n");
+      out.write("\n");
+      out.write("        <!-- js-->\n");
+      out.write("        <script src=\"js/jquery-1.11.1.min.js\"></script>\n");
+      out.write("        <script src=\"js/modernizr.custom.js\"></script>\n");
+      out.write("\n");
+      out.write("        <!--webfonts-->\n");
+      out.write("        <link href=\"//fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,latin-ext\" rel=\"stylesheet\">\n");
+      out.write("        <!--//webfonts--> \n");
+      out.write("\n");
+      out.write("        <!-- Metis Menu -->\n");
+      out.write("        <script src=\"js/metisMenu.min.js\"></script>\n");
+      out.write("        <script src=\"js/custom.js\"></script>\n");
+      out.write("        <link href=\"css/custom.css\" rel=\"stylesheet\">\n");
+      out.write("        <!--//Metis Menu -->\n");
+      out.write("\n");
+      out.write("    </head> \n");
+      out.write("    <body class=\"cbp-spmenu-push\">\n");
+      out.write("        <div class=\"main-content\">\n");
+      out.write("            <div class=\"cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left\" id=\"cbp-spmenu-s1\">\n");
+      out.write("                <!--left-fixed -navigation-->\n");
+      out.write("                ");
+      out.write("<aside class=\"sidebar-left\">\n");
+      out.write("    <nav class=\"navbar navbar-inverse\">\n");
+      out.write("        <div class=\"navbar-header\">\n");
+      out.write("            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\".collapse\" aria-expanded=\"false\">\n");
+      out.write("                <span class=\"sr-only\">Toggle navigation</span>\n");
+      out.write("                <span class=\"icon-bar\"></span>\n");
+      out.write("                <span class=\"icon-bar\"></span>\n");
+      out.write("                <span class=\"icon-bar\"></span>\n");
+      out.write("            </button>\n");
+      out.write("            <a class=\"navbar-brand\" href=\"index.jsp\"><span class=\"fa fa-area-chart\"></span> Glance<span class=\"dashboard_text\">Design Dashboard</span></a>\n");
+      out.write("        </div>\n");
+      out.write("        <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">\n");
+      out.write("            <ul class=\"sidebar-menu\">\n");
+      out.write("                <li class=\"header\">MAIN NAVIGATION</li>\n");
+      out.write("                <li class=\"treeview\">\n");
+      out.write("                    <a href=\"index.jsp\">\n");
+      out.write("                        <i class=\"fa fa-dashboard\"></i> <span>Dashboard</span>\n");
+      out.write("                    </a>\n");
+      out.write("                </li>\n");
+      out.write("                 <li class=\"treeview\">\n");
+      out.write("                    <a href=\"#\">\n");
+      out.write("                        <i class=\"fa fa-bars\"></i>\n");
+      out.write("                        <span>Category</span>\n");
+      out.write("                        <i class=\"fa fa-angle-left pull-right\"></i>\n");
+      out.write("                    </a>\n");
+      out.write("                    <ul class=\"treeview-menu\">\n");
+      out.write("                        <li><a href=\"category-add.jsp\"><i class=\"fa fa-angle-right\"></i> Add</a></li>\n");
+      out.write("                        <li><a href=\"category-edit.jsp\"><i class=\"fa fa-angle-right\"></i> Edit/View</a></li>\n");
+      out.write("                    </ul>\n");
+      out.write("                </li>\n");
+      out.write("                 <li class=\"treeview\">\n");
+      out.write("                    <a href=\"#\">\n");
+      out.write("                        <i class=\"fa fa-bars\"></i>\n");
+      out.write("                        <span>Sub Category</span>\n");
+      out.write("                        <i class=\"fa fa-angle-left pull-right\"></i>\n");
+      out.write("                    </a>\n");
+      out.write("                    <ul class=\"treeview-menu\">\n");
+      out.write("                        <li><a href=\"sub-category-add.jsp\"><i class=\"fa fa-angle-right\"></i> Add</a></li>\n");
+      out.write("                        <li><a href=\"sub-category-edit.jsp\"><i class=\"fa fa-angle-right\"></i> Edit/View</a></li>\n");
+      out.write("                    </ul>\n");
+      out.write("                </li>\n");
+      out.write("                \n");
+      out.write("                <li class=\"treeview\">\n");
+      out.write("                    <a href=\"#\">\n");
+      out.write("                        <i class=\"fa fa-laptop\"></i>\n");
+      out.write("                        <span>Products</span>\n");
+      out.write("                        <i class=\"fa fa-angle-left pull-right\"></i>\n");
+      out.write("                    </a>\n");
+      out.write("                    <ul class=\"treeview-menu\">\n");
+      out.write("                        <li><a href=\"product-add.jsp\"><i class=\"fa fa-angle-right\"></i> Add</a></li>\n");
+      out.write("                        <li><a href=\"product-list.jsp\"><i class=\"fa fa-angle-right\"></i> View</a></li>\n");
+      out.write("                        \n");
+      out.write("                    </ul>\n");
+      out.write("                </li>\n");
+      out.write("                  <li class=\"header\">ORDERS</li>\n");
+      out.write("                <li class=\"treeview\">\n");
+      out.write("                    <a href=\"#\">\n");
+      out.write("                        <i class=\"fa fa-gift\"></i>\n");
+      out.write("                        <span>Orders</span>\n");
+      out.write("                        <i class=\"fa fa-angle-left pull-right\"></i>\n");
+      out.write("                    </a>\n");
+      out.write("                    <ul class=\"treeview-menu\">\n");
+      out.write("                        <li><a href=\"orders-all.jsp\"><i class=\"fa fa-angle-right\"></i> View All </a></li>\n");
+      out.write("                        <li><a href=\"orders-cancel.jsp\"><i class=\"fa fa-angle-right\"></i> View Cancel </a></li>\n");
+      out.write("                        <li><a href=\"orders-delivered.jsp\"><i class=\"fa fa-angle-right\"></i> View Delivered </a></li>\n");
+      out.write("                        <li><a href=\"orders-pending.jsp\"><i class=\"fa fa-angle-right\"></i> View Pending </a></li>\n");
+      out.write("                        \n");
+      out.write("                        \n");
+      out.write("                    </ul>\n");
+      out.write("                </li>\n");
+      out.write("                <li class=\"treeview\">\n");
+      out.write("                    <a href=\"#\">\n");
+      out.write("                        <i class=\"fa fa-shopping-bag\"></i>\n");
+      out.write("                        <span>Sales</span>\n");
+      out.write("                        <i class=\"fa fa-angle-left pull-right\"></i>\n");
+      out.write("                    </a>\n");
+      out.write("                    <ul class=\"treeview-menu\">\n");
+      out.write("                         \n");
+      out.write("                        <li><a href=\"sales-monthly.jsp\"><i class=\"fa fa-angle-right\"></i> Current Month </a></li>\n");
+      out.write("                        <li><a href=\"sales-year.jsp\"><i class=\"fa fa-angle-right\"></i> Current Year </a></li>\n");
+      out.write("                        <li><a href=\"sales-period.jsp\"><i class=\"fa fa-angle-right\"></i> Specify Period </a></li>\n");
+      out.write("                        \n");
+      out.write("                        \n");
+      out.write("                    </ul>\n");
+      out.write("                </li>\n");
+      out.write("                <li class=\"header\">Customers</li>\n");
+      out.write("                 <li class=\"treeview\">\n");
+      out.write("                    <a href=\"#\">\n");
+      out.write("                        <i class=\"fa fa-users\"></i>\n");
+      out.write("                        <span>Users</span>\n");
+      out.write("                        <i class=\"fa fa-angle-left pull-right\"></i>\n");
+      out.write("                    </a>\n");
+      out.write("                    <ul class=\"treeview-menu\">\n");
+      out.write("                        <li><a href=\"user-all.jsp\"><i class=\"fa fa-angle-right\"></i> View All </a></li>\n");
+      out.write("                        \n");
+      out.write("                        \n");
+      out.write("                        \n");
+      out.write("                        \n");
+      out.write("                    </ul>\n");
+      out.write("                </li>\n");
+      out.write("               \n");
+      out.write("              \n");
+      out.write("                <li><a href=\"#\"><i class=\"fa fa-lock text-red\"></i> <span>Logout</span></a></li>\n");
+      out.write("                \n");
+      out.write("            </ul>\n");
+      out.write("        </div>\n");
+      out.write("        <!-- /.navbar-collapse -->\n");
+      out.write("    </nav>\n");
+      out.write("</aside>");
+      out.write("\n");
+      out.write("            </div>\n");
+      out.write("            <!--left-fixed -navigation-->\n");
+      out.write("\n");
+      out.write("            <!-- header-starts -->\n");
+      out.write("            ");
+      out.write("<div class=\"sticky-header header-section \">\n");
+      out.write("    <div class=\"header-left\">\n");
+      out.write("\n");
+      out.write("        <!--toggle button start-->\n");
+      out.write("        <button id=\"showLeftPush\"><i class=\"fa fa-bars\"></i></button>\n");
+      out.write("        <!--toggle button end-->\n");
+      out.write("\n");
+      out.write("        <!--notification menu end -->\n");
+      out.write("        <div class=\"clearfix\"> </div>\n");
+      out.write("    </div>\n");
+      out.write("    <div class=\"header-right\">\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("        <div class=\"profile_details\">\t\t\n");
+      out.write("            <ul>\n");
+      out.write("                <li class=\"dropdown profile_details_drop\">\n");
+      out.write("                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" aria-expanded=\"false\">\n");
+      out.write("                        <div class=\"profile_img\">\t\n");
+      out.write("                            <span class=\"prfil-img\"><img src=\"images/2.jpg\" alt=\"\"> </span> \n");
+      out.write("                            <div class=\"user-name\">\n");
+      out.write("                                <p>Admin Name</p>\n");
+      out.write("                                <span>Administrator</span>\n");
+      out.write("                            </div>\n");
+      out.write("                            <i class=\"fa fa-angle-down lnr\"></i>\n");
+      out.write("                            <i class=\"fa fa-angle-up lnr\"></i>\n");
+      out.write("                            <div class=\"clearfix\"></div>\t\n");
+      out.write("                        </div>\t\n");
+      out.write("                    </a>\n");
+      out.write("                    <ul class=\"dropdown-menu drp-mnu\">\n");
+      out.write("                        <li> <a href=\"#\"><i class=\"fa fa-cog\"></i> Settings</a> </li> \n");
+      out.write("                        <li> <a href=\"#\"><i class=\"fa fa-user\"></i> My Account</a> </li>\n");
+      out.write("                        <li> <a href=\"#\"><i class=\"fa fa-suitcase\"></i> Profile</a> </li> \n");
+      out.write("                        <li> <a href=\"#\"><i class=\"fa fa-sign-out\"></i> Logout</a> </li>\n");
+      out.write("                    </ul>\n");
+      out.write("                </li>\n");
+      out.write("            </ul>\n");
+      out.write("        </div>\n");
+      out.write("        <div class=\"clearfix\"> </div>\t\t\t\t\n");
+      out.write("    </div>\n");
+      out.write("    <div class=\"clearfix\"> </div>\t\n");
+      out.write("</div>");
+      out.write("\n");
+      out.write("            <!-- //header-ends -->\n");
+      out.write("            <!-- main content start-->\n");
+      out.write("            <div id=\"page-wrapper\">\n");
+      out.write("                <div class=\"main-page\">\n");
+      out.write("                    <div class=\"forms\">\n");
+      out.write("                        <h2 class=\"title1\">Product List</h2>\n");
+      out.write("                        <div class=\"form-grids row widget-shadow\" data-example-id=\"basic-forms\"> \n");
+      out.write("                            <div class=\"form-title\">\n");
+      out.write("                                <h4>Product List:</h4>\n");
+      out.write("                            </div>\n");
+      out.write("                            <div class=\"form-body\">\n");
+      out.write("                                \n");
+      out.write("                                \n");
+      out.write("                                    \n");
+      out.write("                                     <div class=\"form-group col-lg-12 \">\n");
+      out.write("                                    <table class=\"table table-bordered table-striped\">\n");
+      out.write("                                        <tr>\n");
+      out.write("                                            <th>Product Name</th>\n");
+      out.write("                                            <th>Brands</th>\n");
+      out.write("                                            <th>MRP</th>\n");
+      out.write("                                            <th>Price</th>\n");
+      out.write("                                            <th>Quantity</th>\n");
+      out.write("                                            <th>Picture</th>\n");
+      out.write("                                            <th>Date On</th>\n");
+      out.write("                                            <th>Action</th>\n");
+      out.write("                                        </tr>\n");
+      out.write("\n");
+      out.write("                                        ");
+
+                                           ResultSet rs1= microvision.DataUtility.executeDQL("SELECT *FROM tblproducts order by id desc");
+                                           
+                                           while(rs1.next())
+                                           {
+                                               
+      out.write("\n");
+      out.write("                                               <tr>\n");
+      out.write("                                                    <td>");
+ out.print(rs1.getString(2)); 
+      out.write("</td>\n");
+      out.write("                                                   <td>");
+ out.print(rs1.getString(3)); 
+      out.write("</td>\n");
+      out.write("                                                    <td>");
+ out.print(rs1.getString(4)); 
+      out.write("</td>\n");
+      out.write("                                                    \n");
+      out.write("                                                    <td>");
+ out.print(rs1.getString(5)); 
+      out.write("</td>\n");
+      out.write("                                                    <td>");
+ out.print(rs1.getString(6)); 
+      out.write("</td>\n");
+      out.write("                                                    \n");
+      out.write("                                                    <td><img src=\"../product-image/");
+ out.print(rs1.getString("img1")); 
+      out.write("\" class=\"img-responsive img-thumbnail\" style=\"height:120px; \" />  </td>\n");
+      out.write("                                                    <td>");
+ out.print(rs1.getString("dateon")); 
+      out.write("</td>\n");
+      out.write("                                                    <td>\n");
+      out.write("                                                        <a href=\"product-edit.jsp?productedit=");
+ out.print(rs1.getString(1)); 
+      out.write("\" class=\"btn btn-warning\" >Edit</a>\n");
+      out.write("                                                        <a href=\"product-edit.jsp?productdel=");
+ out.print(rs1.getString(1)); 
+      out.write("\"  class=\"btn btn-danger\">Delete</a>\n");
+      out.write("                                                        \n");
+      out.write("                                                    </td>\n");
+      out.write("                                                </tr>\n");
+      out.write("                                               ");
+
+                                           }
+                                           
+                                            
+                                        
+      out.write("\n");
+      out.write("                                        \n");
+      out.write("\n");
+      out.write("                                    </table>\n");
+      out.write("\n");
+      out.write("                                    \n");
+      out.write("                                </div>\n");
+      out.write("                            </div>\n");
+      out.write("\n");
+      out.write("                        </div>\n");
+      out.write("\n");
+      out.write("\n");
+      out.write("                    </div>\n");
+      out.write("                </div>\n");
+      out.write("            </div>\n");
+      out.write("            <!--footer-->\n");
+      out.write("            ");
+      out.write("<div class=\"footer\">\n");
+      out.write("    <p>&copy; 2018 Glance Design Dashboard. All Rights Reserved | Design by <a href=\"https://w3layouts.com/\" target=\"_blank\">w3layouts</a></p>\n");
+      out.write("</div>\n");
+      out.write("<!--//footer-->\n");
+      out.write("</div>\n");
+      out.write("\n");
+      out.write("<!-- side nav js -->\n");
+      out.write("<script src='js/SidebarNav.min.js' type='text/javascript'></script>\n");
+      out.write("<script>\n");
+      out.write("    $('.sidebar-menu').SidebarNav()\n");
+      out.write("</script>\n");
+      out.write("<!-- //side nav js -->\n");
+      out.write("\n");
+      out.write("<!-- Classie --><!-- for toggle left push menu script -->\n");
+      out.write("<script src=\"js/classie.js\"></script>\n");
+      out.write("<script>\n");
+      out.write("    var menuLeft = document.getElementById('cbp-spmenu-s1'),\n");
+      out.write("            showLeftPush = document.getElementById('showLeftPush'),\n");
+      out.write("            body = document.body;\n");
+      out.write("\n");
+      out.write("    showLeftPush.onclick = function () {\n");
+      out.write("        classie.toggle(this, 'active');\n");
+      out.write("        classie.toggle(body, 'cbp-spmenu-push-toright');\n");
+      out.write("        classie.toggle(menuLeft, 'cbp-spmenu-open');\n");
+      out.write("        disableOther('showLeftPush');\n");
+      out.write("    };\n");
+      out.write("\n");
+      out.write("    function disableOther(button) {\n");
+      out.write("        if (button !== 'showLeftPush') {\n");
+      out.write("            classie.toggle(showLeftPush, 'disabled');\n");
+      out.write("        }\n");
+      out.write("    }\n");
+      out.write("</script>\n");
+      out.write("<!-- //Classie --><!-- //for toggle left push menu script -->\n");
+      out.write("\n");
+      out.write("<!--scrolling js-->\n");
+      out.write("<script src=\"js/jquery.nicescroll.js\"></script>\n");
+      out.write("<script src=\"js/scripts.js\"></script>\n");
+      out.write("<!--//scrolling js-->\n");
+      out.write("\n");
+      out.write("<!-- Bootstrap Core JavaScript -->\n");
+      out.write("<script src=\"js/bootstrap.js\"></script>\n");
+      out.write("\n");
+      out.write("</body>\n");
+      out.write("</html>");
+    } catch (Throwable t) {
+      if (!(t instanceof SkipPageException)){
+        out = _jspx_out;
+        if (out != null && out.getBufferSize() != 0)
+          out.clearBuffer();
+        if (_jspx_page_context != null) _jspx_page_context.handlePageException(t);
+        else throw new ServletException(t);
+      }
+    } finally {
+      _jspxFactory.releasePageContext(_jspx_page_context);
+    }
+  }
+}
